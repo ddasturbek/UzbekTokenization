@@ -68,5 +68,18 @@ print(UST.tokenize("Salom barchaga"))  # Salom barchaga
 ```
 Ushu **Syllable Tokenization** dasturi O‘zbek tili so‘zlarini bo‘g‘inlarga ajratadi. Bunda **O‘o‘ G‘g‘** harf va belgilar birikmasi va **ShshChchng** digraflarni to‘g‘ri ajratadi. Bundan tashqari *ng* digraf yoki *n* va *g* alohida harf bo‘lib so‘z tarkibida keladi, bunday hollarda digraf bo‘lsa ular ajralmaydi, alohida kelsa ular ajratilishi mumkin. Ba'zi murakkab so‘zlar qoidalarga tushmaydi, shuning uchun ularning ro‘yhati dastur tarkibida shakllantirilgan. Katta-kichik harflarga sezgir.
 
+## Word Tokenization
+
+```Python
+from UzWordTokenization import UzWordTokenizer as UWT
+
+text = "Dasturlash – kompyuterlar va boshqa mikroprotsessorli elektron mashinalar uchun dasturlar tuzish"
+
+print(UWT.tokenize(text))  # ['Dasturlash', '–', 'kompyuterlar', 'va', 'boshqa', 'mikroprotsessorli', 'elektron', 'mashinalar', 'uchun', 'dasturlar', 'tuzish']
+print(UWT.tokenize(text, False))  # ['Dasturlash', 'kompyuterlar', 'va', 'boshqa', 'mikroprotsessorli', 'elektron', 'mashinalar', 'uchun', 'dasturlar', 'tuzish']
+
+```
+Ushbu **Word Tokenization** dasturi O‘zbek tili matnlarini so‘zlarga ajratadi. Bunda **qo‘shma so‘zlar** (fe'l, ravish, olmosh va undov) va KFSQ (ko‘makchi fe'lli so‘z qo‘shilmasi) larni birgalikda ajratib oladi, masalan, *'idrok etmoq', 'mana bu', 'hech narsa', 'sevib boshlamoq'*. Bundan tashqari *tokenize* funksiyasiga ikkinchi parametr sifatida *TRUE* qiymatini berish orqali, tinish belgilarsiz faqat so‘zlardan iborat tokenlarni olish mumkin.
+
 # Litsenziya
 Bu loyiha [MIT License]([https://github.com/ddasturbek/UzbekTokenization?tab=MIT-1-ov-file](https://opensource.org/license/mit)) litsenziyasiga ega.
