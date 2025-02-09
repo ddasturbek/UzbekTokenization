@@ -1,5 +1,5 @@
 # UzbekTokenization
-O‘zbek tilidagi matnlarni belgilarga, bo‘g‘inlarga, affikslarga, so‘zlarga, gaplarga va tinish belgilariga ajratish uchun mo‘ljallangan dastur.
+O‘zbek tilidagi matnlarni belgilarga, bo‘g‘inlarga, affikslarga, so‘zlarga, gaplarga va tinish belgilariga ajratish uchun mo‘ljallangan kutubxona. Ushbu kutubxona, O'zbek tilidagi matnlarni tokenlarga ajratish, so‘zlarning morfologik tuzilishini tahlil qilish va o‘zbek tilida matnni yaxshiroq tushunish uchun zarur bo‘lgan vositalarni taqdim etadi.
 
 ## Maqsad
 Ushbu loyiha O‘zbek tilidagi matnlarni tokenlash (ajratish) jarayonini amalga oshiradi. Tokenizatsiya – bu matnni kichikroq, tahlil qilinishi mumkin bo‘lgan qismlarga ajratish jarayonidir. Ushbu loyiha asosan tabiiy tilni qayta ishlash (NLP) sohasida ishlatilishi mumkin.
