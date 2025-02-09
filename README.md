@@ -46,17 +46,27 @@ Ushbu **Char Tokenization** dasturi O‘zbek tili harflari uchun to‘g‘ri ish
 from UzAffixTokenization import UzAffixTokenizer as UAT
 
 print(UAT.tokenize("Serquyosh"))  # Ser-quyosh
-print(UAT.tokenize("kitoblar"))  # kitob-lar
+print(UAT.tokenize("KITOBLAR"))  # KITOB-LAR
 print(UAT.tokenize("o‘qiganman"))  # o‘qi-gan-man
 print(UAT.tokenize("Salom odamlar"))  # Salom odamlar
 ```
-Ushbu **Affixes Tokenization** dasturi O‘zbek tili so‘zlarini affikslarga (qo‘shimchalarga) ajratadi. O‘zbek tilida qo‘shimchalar ikki xil bo‘ladi: *so‘z yasovchi* va *shakl yasovchi*. Shakl yasovchi qo‘shimchalar ham o‘z navbatida ikkiga bo‘linadi: *lug‘aviy shakl yasovchi* va *sintaktik shakl yasovchi* qo‘shimchalarga. Dastur aynan sintaktik shakl yasovchi qo‘shimchalarning ikki va undan ko‘p belgidan iborat bo‘lganlarini ajratadi. Chunki so‘z yasovchi, lug‘aviy shakl yasovchi qo‘shimchalar va bitta harfdan iborat sintaktik shakl yasovchi qo‘shimchalar so‘z tarkibidagi harflarga o‘xshash bo‘ladi, bunday holda qo‘shimcha va so‘z tarkibidagi harflarni ajratish murakkab bo‘lib qoladi. Dastur faqat so‘zlarni affikslarga ajratadi, agar matn berilsa uni o‘z holicha qaytaradi.
+Ushbu **Affixes Tokenization** dasturi O‘zbek tili so‘zlarini affikslarga (qo‘shimchalarga) ajratadi. O‘zbek tilida qo‘shimchalar ikki xil bo‘ladi: *so‘z yasovchi* va *shakl yasovchi*. Shakl yasovchi qo‘shimchalar ham o‘z navbatida ikkiga bo‘linadi: *lug‘aviy shakl yasovchi* va *sintaktik shakl yasovchi* qo‘shimchalarga. Dastur aynan sintaktik shakl yasovchi qo‘shimchalarning ikki va undan ko‘p belgidan iborat bo‘lganlarini ajratadi. Chunki so‘z yasovchi, lug‘aviy shakl yasovchi qo‘shimchalar va bitta harfdan iborat sintaktik shakl yasovchi qo‘shimchalar so‘z tarkibidagi harflarga o‘xshash bo‘ladi, bunday holda qo‘shimcha va so‘z tarkibidagi harflarni ajratish murakkab bo‘lib qoladi. Dastur faqat so‘zlarni affikslarga ajratadi, agar matn berilsa uni o‘z holicha qaytaradi. Katta-kichik harflarga sezgir.
 
 ## Syllable Tokenization
 
 ```Python
-Python
+from UzSyllabTokenization import UzSyllabTokenizer as UST
+
+print(UST.tokenize("Gul"))  # Gul
+print(UST.tokenize("Yulduz"))  # Yul-duz
+print(UST.tokenize("shashlik"))  # shash-lik
+print(UST.tokenize("BOG‘BON"))  # BOG‘-BON
+print(UST.tokenize("kelinglar"))  # ke-ling-lar
+print(UST.tokenize("yangilik"))  # yan-gi-lik
+print(UST.tokenize("Agglyutinativ"))  # ag-glyu-ti-na-tiv
+print(UST.tokenize("Salom barchaga"))  # Salom barchaga
 ```
+Ushu **Syllable Tokenization** dasturi O‘zbek tili so‘zlarini bo‘g‘inlarga ajratadi. Bunda **O‘o‘ G‘g‘** harf va belgilar birikmasi va **ShshChchng** digraflarni to‘g‘ri ajratadi. Bundan tashqari *ng* digraf yoki *n* va *g* alohida harf bo‘lib so‘z tarkibida keladi, bunday hollarda digraf bo‘lsa ular ajralmaydi, alohida kelsa ular ajratilishi mumkin. Ba'zi murakkab so‘zlar qoidalarga tushmaydi, shuning uchun ularning ro‘yhati dastur tarkibida shakllantirilgan. Katta-kichik harflarga sezgir.
 
 # Litsenziya
 Bu loyiha [MIT License]([https://github.com/ddasturbek/UzbekTokenization?tab=MIT-1-ov-file](https://opensource.org/license/mit)) litsenziyasiga ega.
