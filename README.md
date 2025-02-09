@@ -2,7 +2,7 @@
 O‘zbek tilidagi matnlarni belgilarga, bo‘g‘inlarga, affikslarga, so‘zlarga, gaplarga va tinish belgilariga ajratish uchun mo‘ljallangan dastur.
 
 # Maqsad
-Ushbu loyiha O‘zbek tilidagi matnlarni tokenizatsiya qilishni (ajratishni) amalga oshiradi. Tokenizatsiya – bu matnni kichikroq, tahlil qilinishi mumkin bo‘lgan qismlarga ajratish jarayonidir. Ushbu loyiha asosan tabiiy tilni qayta ishlash (NLP) sohasida ishlatilishi mumkin.
+Ushbu loyiha O‘zbek tilidagi matnlarni tokenlash (ajratish) jarayonini amalga oshiradi. Tokenizatsiya – bu matnni kichikroq, tahlil qilinishi mumkin bo‘lgan qismlarga ajratish jarayonidir. Ushbu loyiha asosan tabiiy tilni qayta ishlash (NLP) sohasida ishlatilishi mumkin.
 
 # Xususiyatlar
 **Char Tokenization**: So‘zni belgilarga ajratish.
