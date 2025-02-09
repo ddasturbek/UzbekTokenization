@@ -42,5 +42,21 @@ Ushbu **Char Tokenization** dasturi O‘zbek tili harflari uchun to‘g‘ri ish
 
 ## Affix Tokenization
 
+```Python
+from UzAffixTokenization import UzAffixTokenizer as UAT
+
+print(UAT.tokenize("Serquyosh"))  # Ser-quyosh
+print(UAT.tokenize("kitoblar"))  # kitob-lar
+print(UAT.tokenize("o‘qiganman"))  # o‘qi-gan-man
+print(UAT.tokenize("Salom odamlar"))  # Salom odamlar
+```
+Ushbu **Affixes Tokenization** dasturi O‘zbek tili so‘zlarini affikslarga (qo‘shimchalarga) ajratadi. O‘zbek tilida qo‘shimchalar ikki xil bo‘ladi: *so‘z yasovchi* va *shakl yasovchi*. Shakl yasovchi qo‘shimchalar ham o‘z navbatida ikkiga bo‘linadi: *lug‘aviy shakl yasovchi* va *sintaktik shakl yasovchi* qo‘shimchalarga. Dastur aynan sintaktik shakl yasovchi qo‘shimchalarning ikki va undan ko‘p belgidan iborat bo‘lganlarini ajratadi. Chunki so‘z yasovchi, lug‘aviy shakl yasovchi qo‘shimchalar va bitta harfdan iborat sintaktik shakl yasovchi qo‘shimchalar so‘z tarkibidagi harflarga o‘xshash bo‘ladi, bunday holda qo‘shimcha va so‘z tarkibidagi harflarni ajratish murakkab bo‘lib qoladi. Dastur faqat so‘zlarni affikslarga ajratadi, agar matn berilsa uni o‘z holicha qaytaradi.
+
+## Syllable Tokenization
+
+```Python
+Python
+```
+
 # Litsenziya
-Bu loyiha [MIT License](https://github.com/ddasturbek/UzbekTokenization?tab=MIT-1-ov-file) litsenziyasiga ega.
+Bu loyiha [MIT License]([https://github.com/ddasturbek/UzbekTokenization?tab=MIT-1-ov-file](https://opensource.org/license/mit)) litsenziyasiga ega.
