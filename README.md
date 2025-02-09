@@ -5,12 +5,12 @@ O‘zbek tilidagi matnlarni belgilarga, bo‘g‘inlarga, affikslarga, so‘zlar
 Ushbu loyiha O‘zbek tilidagi matnlarni tokenlash (ajratish) jarayonini amalga oshiradi. Tokenizatsiya – bu matnni kichikroq, tahlil qilinishi mumkin bo‘lgan qismlarga ajratish jarayonidir. Ushbu loyiha asosan tabiiy tilni qayta ishlash (NLP) sohasida ishlatilishi mumkin.
 
 # Xususiyatlar
-1. **Char Tokenization**: So‘zni belgilarga ajratish.
-1. **Syllable Tokenization**: So‘zni bo‘g‘inlarga ajratish.
-1. **Affix Tokenization**: So‘zni affikslarga ajratish.
-1. **Word Tokenization**: Matnni so‘zlarga ajratish.
-1. **Sent Tokenization**: Matnni gaplarga ajratish.
-1. **Punc Tokenization**: Matnni tinish begilargacha ajratish.
+* **Char Tokenization**: So‘zni belgilarga ajratish.
+* **Syllable Tokenization**: So‘zni bo‘g‘inlarga ajratish.
+* **Affix Tokenization**: So‘zni affikslarga ajratish.
+* **Word Tokenization**: Matnni so‘zlarga ajratish.
+* **Sent Tokenization**: Matnni gaplarga ajratish.
+* **Punc Tokenization**: Matnni tinish begilargacha ajratish.
 
 # GitHub
 Loyiha bilan ishlash uchun [GitHubdan](https://github.com/ddasturbek/UzbekTokenization) yuklab olish mumkin:
@@ -27,6 +27,14 @@ pip install UzbekTokenization
 # Foydalanish
 Loyihadan foydalanish juda oson. Quyidagi kod namunalari orqali tokenlash jarayonlarini amalga oshirishingiz mumkin:
 
+```Python
+from UzCharTokenization import UzCharTokenizer as UCT
+
+print(UCT.tokenize("Choshgoh"))  # 
+print(UCT.tokenize("bodiring"))
+print(UCT.tokenize("Salom, dunyo!"))
+print(UCT.tokenize("Salom, dunyo!", True)) 
+```
 
 
 # Litsenziya
