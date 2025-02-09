@@ -1,4 +1,4 @@
-# UzbekTokenization
+## UzbekTokenization
 O‘zbek tilidagi matnlarni belgilarga, bo‘g‘inlarga, affikslarga, so‘zlarga, gaplarga va tinish belgilariga ajratish uchun mo‘ljallangan dastur.
 
 # Maqsad
@@ -24,18 +24,22 @@ Kutubxonalarni o‘rnatish: Loyihani ishlatish uchun [PyPI](https://pypi.org/pro
 pip install UzbekTokenization
 ```
 
-# Foydalanish
+## Foydalanish
 Loyihadan foydalanish juda oson. Quyidagi kod namunalari orqali tokenlash jarayonlarini amalga oshirishingiz mumkin:
+
+# Char Tokenization
 
 ```Python
 from UzCharTokenization import UzCharTokenizer as UCT
 
-print(UCT.tokenize("Choshgoh"))  # 
-print(UCT.tokenize("bodiring"))
-print(UCT.tokenize("Salom, dunyo!"))
-print(UCT.tokenize("Salom, dunyo!", True)) 
+print(UCT.tokenize("o‘g‘ri"))  # ['o‘', 'g‘', 'r', 'i']
+print(UCT.tokenize("choshgoh"))  # ['ch', 'o', 'sh', 'g', 'o', 'h']
+print(UCT.tokenize("bodiring"))  # ['b', 'o', 'd', 'i', 'r', 'i', 'ng']
+print(UCT.tokenize("Salom, dunyo!"))  # ['S', 'a', 'l', 'o', 'm', ',', 'd', 'u', 'n', 'y', 'o', '!']
+print(UCT.tokenize("Salom, dunyo!", True))  # ['S', 'a', 'l', 'o', 'm', ',', ' ', 'd', 'u', 'n', 'y', 'o', '!']
 ```
+Ushbu **Char Tokenization** dasturi O‘zbek tili harflari uchun to‘g‘ri ishlaydi, chunki O‘zbek tilida **O‘o‘ G‘g‘** harf va belgilar birikmasi va **ShshChchng** digraflar bitta harf hisoblanadi. Agar **True** qiymati berilsa, bo‘sh joylarni ham inobatga olgan holda ajratadi.
 
 
-# Litsenziya
+## Litsenziya
 Bu loyiha [MIT License](https://github.com/ddasturbek/UzbekTokenization?tab=MIT-1-ov-file) litsenziyasiga ega.
