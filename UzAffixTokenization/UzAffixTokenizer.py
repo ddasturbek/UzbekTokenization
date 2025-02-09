@@ -20,10 +20,16 @@ def tokenize(word):
 
     # Separating suffixes
     suffixes = noun_suffixes + verb_suffixes + suffixes
-    for suffix in suffixes:
-        if word.lower().endswith(suffix):
-            suffixed_parts.append(word[-len(suffix):])
-            word = word[:-len(suffix)]
+    while True:
+        found = False
+        for suffix in suffixes:
+            if word.lower().endswith(suffix):
+                suffixed_parts.append(word[-len(suffix):])
+                word = word[:-len(suffix)]
+                found = True
+                break
+        if not found:
+            break
 
     if prefixed_parts or suffixed_parts:
         affixed_parts = prefixed_parts + [word] + suffixed_parts[::-1]
