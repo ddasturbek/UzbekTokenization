@@ -79,7 +79,7 @@ print(UWT.tokenize(text))  # ['Dasturlash', '–', 'kompyuterlar', 'va', 'boshqa
 print(UWT.tokenize(text, False))  # ['Dasturlash', 'kompyuterlar', 'va', 'boshqa', 'mikroprotsessorli', 'elektron', 'mashinalar', 'uchun', 'dasturlar', 'tuzish']
 
 ```
-Ushbu **Word Tokenization** dasturi O‘zbek tili matnlarini so‘zlarga ajratadi. Bunda **qo‘shma so‘zlar** (fe'l, ravish, olmosh va undov) va KFSQ (ko‘makchi fe'lli so‘z qo‘shilmasi) larni birgalikda ajratib oladi, masalan, *'idrok etmoq', 'mana bu', 'hech narsa', 'sevib boshlamoq'*. Bundan tashqari *tokenize* funksiyasiga ikkinchi parametr sifatida *TRUE* qiymatini berish orqali, tinish belgilarsiz faqat so‘zlardan iborat tokenlarni olish mumkin.
+Ushbu **Word Tokenization** dasturi O‘zbek tili matnlarini so‘zlarga ajratadi. Bunda **qo‘shma so‘zlar** (fe'l, ravish, olmosh va undov) va KFSQ (ko‘makchi fe'lli so‘z qo‘shilmasi) larni birgalikda ajratib oladi, masalan, *'idrok etmoq', 'mana bu', 'hech narsa', 'sevib boshlamoq'*. Bundan tashqari *tokenize* funksiyasiga ikkinchi parametr sifatida *False* qiymatini berish orqali, tinish belgilarsiz faqat so‘zlardan iborat tokenlarni olish mumkin.
 
 # Litsenziya
 Bu loyiha [MIT License]([https://github.com/ddasturbek/UzbekTokenization?tab=MIT-1-ov-file](https://opensource.org/license/mit)) litsenziyasiga ega.
