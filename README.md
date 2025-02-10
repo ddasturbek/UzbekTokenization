@@ -136,6 +136,7 @@ print(UPT.tokenize(text))
 print(UPT.tokenize(text, False))
 # ['Bugun juda qiziq voqea ro‘y berdi', 'Do‘stim bilan shahar bo‘ylab sayr qilayotgan edik', 'to‘satdan u to‘xtadi', 'da', 'Hey', 'bu yerga qarang', 'dedi hayajon bilan', 'Men nigohimni u ko‘rsatgan tomonga burdim', 'Nahotki', 'Qarshimda bolalikdagi eng yaxshi do‘stim turardi', 'U bilan qancha yillardan beri ko‘rishmaganmiz', 'Bu senmisan', 'dedim hayrat bilan', 'U kulimsirab bosh irg‘adi', 'Ha', 'menman', 'Axir', 'qancha vaqt o‘tdi', 'a', 'Biz uzoq suhbatlashdik', 'eski xotiralarni esladik', 'O‘sha lahzalar men uchun unutilmas bo‘ldi']
 ```
+Ushbu **Punc Tokenization** dasturi matnlarni tinish belgilarigacha ajratadi. Tokenni tinish belgilarisiz chiqarish uchun esa, *tokenize* funksiyasiga ikkinchi parametr sifatida *False* qiymati berish lozim.
 
 # Litsenziya
 Bu loyiha [MIT License](https://opensource.org/license/mit) litsenziyasiga ega.
