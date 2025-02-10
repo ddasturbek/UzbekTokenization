@@ -25,7 +25,7 @@ pip install UzbekTokenization
 ```
 
 # Foydalanish
-Loyihadan foydalanish juda oson. Quyidagi kod namunalari orqali tokenlash jarayonlarini amalga oshirishingiz mumkin:
+Loyihadan foydalanish juda oson. Quyidagi kod namunalari orqali tokenlash jarayonlarini amalga oshirishingiz mumkin.
 
 ## Char Tokenization
 
@@ -81,5 +81,61 @@ print(UWT.tokenize(text, False))  # ['Dasturlash', 'kompyuterlar', 'va', 'boshqa
 ```
 Ushbu **Word Tokenization** dasturi O‘zbek tili matnlarini so‘zlarga ajratadi. Bunda **qo‘shma so‘zlar** (fe'l, ravish, olmosh va undov) va KFSQ (ko‘makchi fe'lli so‘z qo‘shilmasi) larni birgalikda ajratib oladi, masalan, *'idrok etmoq', 'mana bu', 'hech narsa', 'sevib boshlamoq'*. Bundan tashqari *tokenize* funksiyasiga ikkinchi parametr sifatida *False* qiymatini berish orqali, tinish belgilarsiz faqat so‘zlardan iborat tokenlarni olish mumkin.
 
+## Sent Tokenization
+
+```Python
+from UzSentTokenization import UzSentTokenizer as UST
+
+text = "Bugun bog‘da sayr qildik. Atrofdagi daraxtlar yam-yashil, " \
+       "qushlar esa chug‘urlab sayrayapdi. Bahorning iliq havosi butun " \
+       "olamni jonlantirganday tuyuladi. Sen hech shunday sokin va go‘zal " \
+       "manzarani ko‘rganmisan? Bu yerda hamma narsa ajib bir go‘zallikka " \
+       "ega! Nahotki tabiat bunday mo‘jizalarni yaratishga qodir bo‘lsa? Oh, " \
+       "qanday ajoyib kun! Shu lahzalarning hech qachon tugashini istamayman!"
+
+print(UST.tokenize(text))
+
+"""
+[
+    'Bugun bog‘da sayr qildik.',
+    'Atrofdagi daraxtlar yam-yashil, qushlar esa chug‘urlab sayrayapdi.',
+    'Bahorning iliq havosi butun olamni jonlantirganday tuyuladi.',
+    'Sen hech shunday sokin va go‘zal manzarani ko‘rganmisan?',
+    'Bu yerda hamma narsa ajib bir go‘zallikka ega!',
+    'Nahotki tabiat bunday mo‘jizalarni yaratishga qodir bo‘lsa?',
+    'Oh, qanday ajoyib kun!',
+    'Shu lahzalarning hech qachon tugashini istamayman!'
+]
+"""
+```
+Ushbu **Sent Tokenization** dasturi matnlarni gaplarga ajratadi. Bunda dastur O‘zbek tili grammatikasining sintaksis qoidalariga asosan bu ishni amalga oshiradi. O‘zbek tilida gaplar, umuman ko‘p tillarda gaplar *[.!?]* belgilari bilan yoki ularni birgalikda ishlatish bilan tugaydi.
+
+## Punc Tokenization
+
+```Python
+from UzPuncTokenization import UzPuncTokenizer as UPT
+
+text = """  Bugun juda qiziq voqea ro‘y berdi! Do‘stim bilan shahar bo‘ylab sayr qilayotgan edik, to‘satdan u to‘xtadi-da:
+
+            — Hey, bu yerga qarang! — dedi hayajon bilan.
+            
+            Men nigohimni u ko‘rsatgan tomonga burdim... Nahotki?! Qarshimda bolalikdagi eng yaxshi do‘stim turardi. U bilan qancha yillardan beri ko‘rishmaganmiz!
+            
+            — Bu senmisan? — dedim hayrat bilan.
+            
+            U kulimsirab bosh irg‘adi:
+            
+            — Ha, menman! Axir, qancha vaqt o‘tdi-a?!
+            
+            Biz uzoq suhbatlashdik; eski xotiralarni esladik. O‘sha lahzalar men uchun unutilmas bo‘ldi...
+        """
+
+print(UPT.tokenize(text))
+#  ['Bugun juda qiziq voqea ro‘y berdi', '!', 'Do‘stim bilan shahar bo‘ylab sayr qilayotgan edik', ',', 'to‘satdan u to‘xtadi', '-', 'da', ':', '—', 'Hey', ',', 'bu yerga qarang', '!', '—', 'dedi hayajon bilan', '.', 'Men nigohimni u ko‘rsatgan tomonga burdim', '.', '.', '.', 'Nahotki', '?', '!', 'Qarshimda bolalikdagi eng yaxshi do‘stim turardi', '.', 'U bilan qancha yillardan beri ko‘rishmaganmiz', '!', '—', 'Bu senmisan', '?', '—', 'dedim hayrat bilan', '.', 'U kulimsirab bosh irg‘adi', ':', '—', 'Ha', ',', 'menman', '!', 'Axir', ',', 'qancha vaqt o‘tdi', '-', 'a', '?', '!', 'Biz uzoq suhbatlashdik', ';', 'eski xotiralarni esladik', '.', 'O‘sha lahzalar men uchun unutilmas bo‘ldi', '.', '.', '.']
+
+print(UPT.tokenize(text, False))
+# ['Bugun juda qiziq voqea ro‘y berdi', 'Do‘stim bilan shahar bo‘ylab sayr qilayotgan edik', 'to‘satdan u to‘xtadi', 'da', 'Hey', 'bu yerga qarang', 'dedi hayajon bilan', 'Men nigohimni u ko‘rsatgan tomonga burdim', 'Nahotki', 'Qarshimda bolalikdagi eng yaxshi do‘stim turardi', 'U bilan qancha yillardan beri ko‘rishmaganmiz', 'Bu senmisan', 'dedim hayrat bilan', 'U kulimsirab bosh irg‘adi', 'Ha', 'menman', 'Axir', 'qancha vaqt o‘tdi', 'a', 'Biz uzoq suhbatlashdik', 'eski xotiralarni esladik', 'O‘sha lahzalar men uchun unutilmas bo‘ldi']
+```
+
 # Litsenziya
-Bu loyiha [MIT License]([https://github.com/ddasturbek/UzbekTokenization?tab=MIT-1-ov-file](https://opensource.org/license/mit)) litsenziyasiga ega.
+Bu loyiha [MIT License](https://opensource.org/license/mit) litsenziyasiga ega.
