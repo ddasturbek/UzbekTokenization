@@ -61,7 +61,7 @@ def tokenize(word):
         return word
 
     # Dictionary of words with predefined syllabifications
-    exceptions = {  # (n units)
+    exceptions = {  # 56 units
         "abstrakt": "abs-trakt",
         "agglyutinativ": "ag-glyu-ti-na-tiv",
         "ansambl": "an-sambl",
@@ -82,7 +82,42 @@ def tokenize(word):
         "kongres": "kon-gres",
         "vengriya": "ven-gri-ya",
         "yangilik": "yan-gi-lik",
-        "ob-havo": "ob-ha-vo"
+        "ob-havo": "ob-ha-vo",
+        "xalqchilikka": "xalq-chi-lik-ka",
+        "avangard": "a-van-gard",
+        "shtanga": "shtan-ga",
+        "translator": "trans-la-tor",
+        "mexanizmlarini": "me-xa-nizm-la-ri-ni",
+        "maxanizmlashtirish": "ma-xa-nizm-lash-ti-rish",
+        "qalani": "qa'la-ni",
+        "alochi": "a'-lo-chi",
+        "tirbandlik": "tir-band-lik",
+        "farzandli": "far-zand-li",
+        "tanga": "tan-ga",
+        "mashal": "mash'-al",
+        "angren": "an-gren",
+        "sehrli": "sehr-li",
+        "sementchi": "se-ment-chi",
+        "hunarmandchilik": "hu-nar-mand-chi-lik",
+        "afsungar": "af-sun-gar",
+        "chilangar": "chi-lan-gar",
+        "goshtli": "go'sht-li",
+        "daraxtlik": "daraxt-lik",
+        "daraxtzor": "daraxt-zor",
+        "mehrli": "mehr-li",
+        "mehrsiz": "mehr-siz",
+        "dostlik": "do'st-lik",
+        "dostona": "do's-to-na",
+        "dostmuhammad": "do'st-mu-ham-mad",
+        "rostlik": "rost-lik",
+        "rostgoy": "rost-go'y",
+        "pastlik": "past-lik",
+        "pasttekislik": "past-te-kis-lik",
+        "qorqinchli": "qo'r-qinch-li",
+        "faxrli": "faxr-li",
+        "faxrlanmoq": "faxr-lan-moq",
+        "farqli": "farq-li",
+        "farqlanmoq": "farq-lan-moq"
     }
     stem = ''
     exc = False
